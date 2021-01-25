@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VegeBio.Data;
+using VegeBio.Models;
 
 namespace VegeBio.Models
 {
-    public class DbInitialize
+    public static class DbInitialize
     {
+        public static void Initialize(ApplicationDbContext context)
     }
 }

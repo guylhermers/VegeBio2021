@@ -14,7 +14,6 @@ namespace VegeBio.Models
         [Display(Name = "Nome")]
         public string nome;
 
-
         [Display(Name = "Estação")]
         public string epoca;
 
@@ -25,17 +24,5 @@ namespace VegeBio.Models
 
         public string imageurl;
 
-
-        public Produto(int id, string epoca, float preco, string tipo)
-        {
-            this.id = id;
-            this.epoca = epoca;
-            this.preco = preco;
-            this.tipo = tipo;
-        }
-
-        public void converterImagem()
-        {
-        }
     }
 }

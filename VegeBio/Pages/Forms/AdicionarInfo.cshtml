@@ -1,0 +1,13 @@
+﻿@page
+@model VegeBio.Pages.Forms.AdicionarInfoModel
+@{
+    ViewData["Title"] = "Inserir Dados";
+}
+
+<h1>Inserir Dados Pessoais</h1>
+<form method="post">
+    <input type="text" asp-for="Cliente.nome" placeholder="Nome" />
+    <input type="text" asp-for="Cliente.morada" placeholder="Morada" />
+    <input type="text" asp-for="Cliente.nif" placeholder="Nif" />
+    <button type="submit">Sumbit</button>
+</form>

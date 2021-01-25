@@ -7,16 +7,10 @@ namespace VegeBio.Models
 {
     public class Cliente
     {
-        private int id;
-        private string nome;
-        private string morada;
-        private int nif;
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string morada { get; set; }
+        public int nif { get; set; }
 
-
-
-        public int Id { get => id; set => id = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Morada { get => morada; set => morada = value; }
-        public int Nif { get => nif; set => nif = value; }
     }
 }

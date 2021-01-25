@@ -21,7 +21,7 @@ namespace VegeBio.Models
 
         public bool adicionarProduto(Produto produto)
         {
-            if (produto.Epoca == EpocaAtual)
+            if (produto.epoca == EpocaAtual)
             {
                 ListaProduto.Add(produto);
                 return true;
@@ -35,7 +35,7 @@ namespace VegeBio.Models
         {
             foreach (Produto p in ListaProduto)
             {
-                if (p.ID == produto.ID)
+                if (p.id == produto.id)
                 {
                     ListaProduto.Remove(p);
                 }
@@ -44,16 +44,16 @@ namespace VegeBio.Models
 
         public string verificarEpoca(Produto p)
         {
-            if (p.Epoca == this.EpocaAtual)
+            if (p.epoca == this.EpocaAtual)
             {
-                return ($"O produto encontra-se na época atual {p.Epoca}");
+                return ($"O produto encontra-se na época atual {p.epoca}");
             }
-            else return ($"O produto encontra-se na época {p.Epoca}");
+            else return ($"O produto encontra-se na época {p.epoca}");
         }
 
         public float verificarPreco (Produto p)
         {
-            return p.Preco;
+            return p.preco;
         }
 
         public List<Produto> ListaProduto { get => listaProduto; set => listaProduto = value; }
