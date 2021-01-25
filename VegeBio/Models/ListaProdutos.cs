@@ -5,14 +5,18 @@ using System.Threading.Tasks;
 
 namespace VegeBio.Models
 {
-    public class ListaProdutos : Produto
+    public class ListaProdutos
     {
         private List<Produto> listaProduto;
         private string epocaatual;
 
-        public ListaProdutos(string epoca, int id)
+        public ListaProdutos()
         {
-            this.epocaatual = epoca;
+            int Month = DateTime.Now.Month;
+            if (Month <= 2 || Month > 11) epocaatual = "Inverno";
+            else if (Month <= 5 || Month > 2) epocaatual = "Primavera";
+            else if (Month <= 8 || Month > 5) epocaatual = "Verão";
+            else if (Month <= 11 || Month > 8) epocaatual = "Outono";
         }
 
         public bool adicionarProduto(Produto produto)
@@ -26,6 +30,7 @@ namespace VegeBio.Models
             else return false;
             
         }
+
         public void removerProduto(Produto produto)
         {
             foreach (Produto p in ListaProduto)
@@ -50,6 +55,7 @@ namespace VegeBio.Models
         {
             return p.Preco;
         }
+
         public List<Produto> ListaProduto { get => listaProduto; set => listaProduto = value; }
         public string EpocaAtual { get => epocaatual; set => epocaatual = value; }
     }

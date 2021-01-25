@@ -30,5 +30,9 @@ namespace VegeBio.Models
             this.preco = preco;
             this.tipo = tipo;
         }
+
+        public void converterImagem()
+        {
+        }
     }
 }
