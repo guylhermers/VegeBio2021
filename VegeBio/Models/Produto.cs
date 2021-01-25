@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace VegeBio.Models
 {
-    public class Produto : ListaProdutos
+    public class Produto
     {
         private int id;
 
@@ -29,11 +29,6 @@ namespace VegeBio.Models
             this.epoca = epoca;
             this.preco = preco;
             this.tipo = tipo;
-        }
-
-        public verificarEpoca()
-        {
-
         }
     }
 }
