@@ -9,6 +9,19 @@ namespace VegeBio.Models
 {
     public static class DbInitialize
     {
-        public static void Initialize(ApplicationDbContext context)
+        public static void Initialize(VegeBioContext context)
+        {
+            context.Database.EnsureCreated();
+            if (context.ListaProdutos.Any())
+            {
+                return;
+            }
+
+            var products = new Produto[]
+            {
+
+            };
+
+        }
     }
 }

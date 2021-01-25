@@ -1,4 +1,19 @@
 ﻿@page
 @model VegeBio.Pages.ProdutosModel
 @{
+    ViewData["Title"] = "Produtos";
 }
+<div id="productsWrapper">
+    <ul id="products" data-role="listview" data-inset="true">
+        @foreach (var product in Model.listaProduto)
+        {
+            <li class="product">
+                <a href="~/order/@product.id" title="Encomendar @product.nome">
+                    <img class="product-image" src="~/images/Products/Thumbnails/@product.imageurl" alt="Imagem do @product.nome" />
+                </a>
+                <p class="price">@string.Format("{0:C}", product.preco)</p>
+                <p class="description">@product.descricao</p>
+            </li>
+        }
+    </ul>
+</div>

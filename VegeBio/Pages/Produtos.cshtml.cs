@@ -12,9 +12,9 @@ namespace VegeBio.Pages
 {
     public class ProdutosModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly VegeBioContext _context;
 
-        public ProdutosModel(ApplicationDbContext context)
+        public ProdutosModel(VegeBioContext context)
         {
             _context = context;
         }

@@ -20,6 +20,9 @@ namespace VegeBio.Models
         [Display(Name = "Preço")]
         public float preco;
 
+        [Display(Name = "Descrição")]
+        public float descricao;
+
         public string tipo;
 
         public string imageurl;
