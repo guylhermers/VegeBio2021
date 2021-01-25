@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.ComponentModel.DataAnnotations;
 
 namespace VegeBio.Models
 {
     public class Produto
     {
-        private int id;
+        public int id;
 
-        private string epoca;
+        [Display(Name = "Nome")]
+        public string nome;
 
-        private float preco;
 
-        private string tipo;
+        [Display(Name = "Estação")]
+        public string epoca;
 
-        private string imageurl;
+        [Display(Name = "Preço")]
+        public float preco;
 
-        public int ID { get => id; set => id = value; }
-        public string Epoca { get => epoca; set => epoca = value; }
-        public float Preco { get => preco; set => preco = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
+        public string tipo;
+
+        public string imageurl;
+
 
         public Produto(int id, string epoca, float preco, string tipo)
         {
