@@ -18,7 +18,6 @@ namespace VegeBio.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Produto>().ToTable("Produto");
-
         }
     }
 }

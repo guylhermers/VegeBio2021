@@ -21,7 +21,7 @@ namespace VegeBio.Models
         public float preco;
 
         [Display(Name = "Descrição")]
-        public float descricao;
+        public string descricao;
 
         public string tipo;
 
