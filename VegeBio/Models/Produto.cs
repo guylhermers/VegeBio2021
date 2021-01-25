@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace VegeBio.Models
 {
@@ -15,6 +16,7 @@ namespace VegeBio.Models
 
         private string tipo;
 
+        private string imageurl;
 
         public int ID { get => id; set => id = value; }
         public string Epoca { get => epoca; set => epoca = value; }
