@@ -1,4 +1,53 @@
 ﻿@page
 @model VegeBio.Pages.CabazModel
 @{
+        ViewData["Title"] = "Realize a sua encomenda semanal";
 }
+
+
+    <ol id="orderProcess">
+        <li><span class="step-number">1</span> Escolha o produto</li>
+        <li><span class="step-number">3</span> Recibo</li>
+    </ol>
+
+
+    <form method="Post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <fieldset class="no-legend">
+            <legend>Escolha os produtos da sua encomenda</legend>
+            <img class="product-image order-image" src="~/images/Vegebio.png"/>
+            <ul class="orderPageList" data-role="listview">
+                <li class="email">
+                    <div class="field-validation-error" data-role="fieldcontain">
+                        <label asp-for="@Model">O seu email</label>
+                        <input type="text" asp-for="CustomerEmail" />
+                        <span asp-validation-for="CustomerEmail"></span>
+
+                    </div>
+                </li>
+                <li class="shiping">
+                    <div class="field-validation-error" data-role="fieldcontain">
+                        <label asp-for="ShippingAddress">A sua morada</label>
+                        <textarea rows="4" asp-for="ShippingAddress"></textarea>
+                        <span asp-validation-for="ShippingAddress"></span>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="field-validation-error" data-role="fieldcontain">
+                        <label for="OrderQty">Quantidade</label>
+                        <input type="text" asp-for="OrderQt" />
+                        x
+                        <span id="orderPrice">@string.Format("{0:f}", Model.Produto.preco)</span>
+                        =
+                        <span id="orderTotal">@string.Format("{0:f}", Model.Produto.preco)</span>
+                        <span asp-validation-for="OrderQt"></span>
+                    </div>
+                </li>
+            </ul>
+            <p class="actions">
+                <input type="hidden" asp-for="Produto.id" />
+                <input type="submit" value="Encomendar" data-role="none" data-inline="true" />
+            </p>
+        </fieldset>
+    </form>
